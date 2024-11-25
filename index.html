@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Lista de Pokémon</h1>
+            <button @click="fetchPokemons">Cargar Pokémon</button>
+            <p v-if="loading">Cargando...</p> <!-- Mensaje de carga -->
+            <p v-if="error">{{ error }}</p> <!-- Mensaje de error -->
+            <div v-if="pokemons.length">
+                <div v-for="pokemon in pokemons" :key="pokemon.name" class="pokemon-card">
+                    <h2>{{ pokemon.name }}</h2>
+                    <img :src="pokemon.sprites.front_default" :alt="pokemon.name" />
+                    <p>Altura: {{ pokemon.height }}</p>
+                    <p>Peso: {{ pokemon.weight }}</p>
+                    <p>Tipos: {{pokemon.weight}} </p>
+                        <span v-for="type in pokemon.types" :key="type.type.name">{{ type.type.name }} </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <script
+            src="https://cdn.jsdelivr.net/npm/vue@3.5.12/dist/vue.global.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

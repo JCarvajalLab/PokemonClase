@@ -1,0 +1,51 @@
+body {
+    background-color: #a0df2c; /* Color de fondo suave */
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffcc00; /* Color dorado para el título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el título */
+}
+
+.pokemon-card {
+    background-color: rgb(255, 255, 255); /* Fondo blanco para la carta */
+    border: 2px solid #ffcc00; /* Borde dorado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    padding: 16px;
+    margin: 10px;
+    text-align: center;
+    width: 200px; /* Ancho fijo para las cartas */
+    transition: transform 0.2s; /* Efecto de transformación al pasar el mouse */
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+
+img {
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+}
+
+p {
+    margin: 5px 0; /* Margen para los párrafos */
+}
+
+/* Estilo para los tipos de Pokémon */
+.type {
+    display: inline-block;
+    background-color: #ffcc00; /* Fondo dorado para los tipos */
+    color: white; /* Texto blanco */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 2px; /* Margen entre tipos */
+    font-size: 0.9em; /* Tamaño de fuente menor */
+}
